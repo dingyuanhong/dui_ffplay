@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SDL">
+      <UniqueIdentifier>{938c3059-423f-44fa-afc4-9983e64b4c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG">
+      <UniqueIdentifier>{485b223a-47a0-4566-b269-64c386d3400f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\视频">
+      <UniqueIdentifier>{9b105a27-306f-4aba-a5de-384f6b0571c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\音频">
+      <UniqueIdentifier>{9b0d6c0b-916e-4627-bfc2-f7890420c9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\文件操作">
+      <UniqueIdentifier>{c7b965ce-4b90-4365-83c9-f1bb4db6092c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\同步">
+      <UniqueIdentifier>{55474a9b-c1ac-4549-82ba-dd51ff5860b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\公用">
+      <UniqueIdentifier>{f9cb3869-80f4-4972-a358-d6e281a6286c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDL\音频">
+      <UniqueIdentifier>{8f8b8536-07f8-4ca2-8ef0-ddfbe15ec8fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDL\视频">
+      <UniqueIdentifier>{573e4b56-5316-4863-a366-33b911d7ef57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDL\渲染">
+      <UniqueIdentifier>{fe98e825-8c2c-4571-9189-cace73bac4a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FFMPEG\字幕">
+      <UniqueIdentifier>{4577b540-a531-42f4-94f5-66338a8e0728}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VideoRender.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioRender.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MedioPlay.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>FFMPEG\公用</Filter>
+    </ClInclude>
+    <ClInclude Include="FFMPEGDef.h">
+      <Filter>FFMPEG\公用</Filter>
+    </ClInclude>
+    <ClInclude Include="SynchronizeClock.h">
+      <Filter>FFMPEG\同步</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioDecoder.h">
+      <Filter>FFMPEG\音频</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioDef.h">
+      <Filter>FFMPEG\音频</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioResample.h">
+      <Filter>FFMPEG\音频</Filter>
+    </ClInclude>
+    <ClInclude Include="SynchronizeClockDef.h">
+      <Filter>FFMPEG\同步</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoProcesser.h">
+      <Filter>FFMPEG\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoState.h">
+      <Filter>FFMPEG\文件操作</Filter>
+    </ClInclude>
+    <ClInclude Include="Streamcomponent.h">
+      <Filter>FFMPEG\文件操作</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDef.h">
+      <Filter>FFMPEG\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoPictureRender.h">
+      <Filter>FFMPEG\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenRender.h">
+      <Filter>FFMPEG\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLDraw.h">
+      <Filter>SDL\渲染</Filter>
+    </ClInclude>
+    <ClInclude Include="YUV.h">
+      <Filter>SDL\渲染</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageRender.h">
+      <Filter>SDL\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLVideoRender.h">
+      <Filter>SDL\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLRenderParam.h">
+      <Filter>SDL\视频</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioSampleDraw.h">
+      <Filter>SDL\渲染</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLAudioOpen.h">
+      <Filter>SDL\音频</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioProcesser.h">
+      <Filter>FFMPEG\音频</Filter>
+    </ClInclude>
+    <ClInclude Include="SubtitleProcesser.h">
+      <Filter>FFMPEG\字幕</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VideoRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioRender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MedioPlay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FFMPEGDef.cpp">
+      <Filter>FFMPEG\公用</Filter>
+    </ClCompile>
+    <ClCompile Include="SynchronizeClock.cpp">
+      <Filter>FFMPEG\同步</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioDecoder.cpp">
+      <Filter>FFMPEG\音频</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioResample.cpp">
+      <Filter>FFMPEG\音频</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoProcesser.cpp">
+      <Filter>FFMPEG\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoState.cpp">
+      <Filter>FFMPEG\文件操作</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoPictureRender.cpp">
+      <Filter>FFMPEG\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_Def.cpp">
+      <Filter>SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageRender.cpp">
+      <Filter>SDL\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLVideoRender.cpp">
+      <Filter>SDL\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioSampleDraw.cpp">
+      <Filter>SDL\渲染</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLAudioOpen.cpp">
+      <Filter>SDL\音频</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioProcesser.cpp">
+      <Filter>FFMPEG\音频</Filter>
+    </ClCompile>
+    <ClCompile Include="SubtitleProcesser.cpp">
+      <Filter>FFMPEG\字幕</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B1B4176-BF97-4C70-89FE-93DAD8A13307}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MedioPlayer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\bin</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\ffmpeg\include;..\ffmpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\ffmpeg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioDecoder.h" />
+    <ClInclude Include="AudioDef.h" />
+    <ClInclude Include="AudioProcesser.h" />
+    <ClInclude Include="AudioRender.h" />
+    <ClInclude Include="AudioResample.h" />
+    <ClInclude Include="AudioSampleDraw.h" />
+    <ClInclude Include="FFMPEGDef.h" />
+    <ClInclude Include="MedioPlay.h" />
+    <ClInclude Include="ScreenRender.h" />
+    <ClInclude Include="SDLAudioOpen.h" />
+    <ClInclude Include="SDLDraw.h" />
+    <ClInclude Include="SDLVideoRender.h" />
+    <ClInclude Include="SDLRenderParam.h" />
+    <ClInclude Include="Streamcomponent.h" />
+    <ClInclude Include="SubtitleProcesser.h" />
+    <ClInclude Include="SynchronizeClock.h" />
+    <ClInclude Include="SynchronizeClockDef.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="VideoDef.h" />
+    <ClInclude Include="YUV.h" />
+    <ClInclude Include="ImageRender.h" />
+    <ClInclude Include="VideoProcesser.h" />
+    <ClInclude Include="VideoPictureRender.h" />
+    <ClInclude Include="VideoRender.h" />
+    <ClInclude Include="VideoState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioDecoder.cpp" />
+    <ClCompile Include="AudioProcesser.cpp" />
+    <ClCompile Include="AudioRender.cpp" />
+    <ClCompile Include="AudioResample.cpp" />
+    <ClCompile Include="AudioSampleDraw.cpp" />
+    <ClCompile Include="FFMPEGDef.cpp" />
+    <ClCompile Include="MedioPlay.cpp" />
+    <ClCompile Include="SDLAudioOpen.cpp" />
+    <ClCompile Include="SDLVideoRender.cpp" />
+    <ClCompile Include="SDL_Def.cpp" />
+    <ClCompile Include="SubtitleProcesser.cpp" />
+    <ClCompile Include="SynchronizeClock.cpp" />
+    <ClCompile Include="ImageRender.cpp" />
+    <ClCompile Include="VideoProcesser.cpp" />
+    <ClCompile Include="VideoPictureRender.cpp" />
+    <ClCompile Include="VideoRender.cpp" />
+    <ClCompile Include="VideoState.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

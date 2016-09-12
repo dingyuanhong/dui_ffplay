@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="600,400" caption="0,0,0,30">
+	<VerticalLayout borderround="5,5">
+		<HorizontalLayout pos="0,0,0,30" bkimage="file='Player\BKGHOT.BMP' source='6,2,40,20'">
+			<HorizontalLayout />
+			<HorizontalLayout >
+				<Label name="IDTITLE" align="center"/>
+			</HorizontalLayout >
+			<HorizontalLayout >
+				<Control />
+				<Button name="IDCLOSE" pos="0,0,36,24" normalimage="file='Player\BTN_EXTEND.PNG' source='0,0,36,24'" hotimage="file='Player\BTN_EXTEND.PNG' source='36,0,72,24'" pushedimage="file='Player\BTN_EXTEND.PNG' source='72,0,108,24'" focusedimage="file='Player\BTN_EXTEND.PNG' source='108,0,144,24'"/>
+			</HorizontalLayout >
+		</HorizontalLayout>
+		<Container >
+			<HorizontalLayout >
+				<Control />
+				<VerticalLayout pos="0,0,137,0">
+					<Control />
+					<Container pos="0,0,0,53">
+						<Button name="IDOPENFILE" normalimage="file='Player\BTN_CENTEROPENFILE.PNG' source='0,0,137,53'" hotimage="file='Player\BTN_CENTEROPENFILE.PNG' source='137,0,274,53'" pushedimage="file='Player\BTN_CENTEROPENFILE.PNG' source='274,0,411,53'" focusedimage="file='Player\BTN_CENTEROPENFILE.PNG' source='411,0,548,53'"/>
+					</Container>
+					<Control />
+				</VerticalLayout>
+				<Control />
+			</HorizontalLayout >
+		</Container >
+		<VerticalLayout pos="0,0,0,60">
+			<HorizontalLayout pos="0,0,0,18">
+				<Button name="IDSPEEDDOWN" pos="0,0,31,0" bkimage="file='Player\BTN_SPEEDDOWN.BMP' source='0,0,31,18'" hotimage="file='Player\BTN_SPEEDDOWN.BMP' source='31,0,62,18'" pushedimage="file='Player\BTN_SPEEDDOWN.BMP' source='62,0,93,18'"/>
+				<Slider name="IDPLAYSEEK" pos="0,0,0,18" bkimage="file='Player\PLAYSEEKSLIDER\SLIDER_PLAYSEEK_EMPTY.BMP' corner='5,30,5,30'" foreimage="file='Player\PLAYSEEKSLIDER\SLIDER_PLAYSEEK_FILL.BMP' corner='5,30,5,30'" thumbhotimage="Player\PLAYSEEKSLIDER\SLIDER_PLAYSEEK_KNOB.BMP" thumbpushedimage="Player\PLAYSEEKSLIDER\SLIDER_PLAYSEEK_KNOBHOT.BMP" thumbsize="24,18"/>
+				<Button name="IDSPEEDUP" pos="0,0,31,0" bkimage="file='Player\BTN_SPEEDUP.BMP' source='0,0,31,18'" hotimage="file='Player\BTN_SPEEDUP.BMP' source='31,0,62,18'" pushedimage="file='Player\BTN_SPEEDUP.BMP' source='62,0,93,18'"/>
+			</HorizontalLayout>
+			<HorizontalLayout pos="0,0,0,42" bkimage="file='Player\BKGHOT.BMP' source='6,2,40,20'">
+				<HorizontalLayout >
+					<HorizontalLayout >
+						<Control />
+						<Label name="IDPTS" pos="0,0,110,0" text="00:00:00/00:00:00" align="center" textcolor="#FFFFFFFF"/>
+						<Button name="IDSTOP" pos="0,0,37,37" padding="0,3,0,0" normalimage="file='Player\BTN_STOP.BMP' source='0,0,37,37'" hotimage="file='Player\BTN_STOP.BMP' source='37,0,74,37'" pushedimage="file='Player\BTN_STOP.BMP' source='74,0,111,37'" focusedimage="file='Player\BTN_STOP.BMP' source='111,0,148,37'"/>
+					</HorizontalLayout >
+				</HorizontalLayout >
+				<HorizontalLayout pos="0,0,147,0">
+					<Button name="IDPRE" pos="0,0,43,42" normalimage="file='Player\BTN_PRE.BMP' source='0,0,43,42'" hotimage="file='Player\BTN_PRE.BMP' source='43,0,86,42'" pushedimage="file='Player\BTN_PRE.BMP' source='86,0,129,42'" focusedimage="file='Player\BTN_PRE.BMP' source='129,0,172,42'"/>
+					<Container pos="0,0,61,0">
+						<Button name="IDPLAY" normalimage="file='Player\BTN_PLAY.BMP' source='0,0,61,42'" hotimage="file='Player\BTN_PLAY.BMP' source='61,0,122,42'" pushedimage="file='Player\BTN_PLAY.BMP' source='122,0,183,42'" focusedimage="file='Player\BTN_PLAY.BMP' source='183,0,244,42'"/>
+						<Button name="IDPAUSE" visible="false" textcolor="#00000000" disabledtextcolor="#00000000" normalimage="file='Player\BTN_PAUSE.BMP' source='0,0,61,42'" hotimage="file='Player\BTN_PAUSE.BMP' source='61,0,122,42'" pushedimage="file='Player\BTN_PAUSE.BMP' source='122,0,183,42'" focusedimage="file='Player\BTN_PAUSE.BMP' source='183,0,244,42'"/>
+					</Container>
+					<Button name="IDNEXT" pos="0,0,43,0" normalimage="file='Player\BTN_NEXT.BMP' source='0,0,43,42'" hotimage="file='Player\BTN_NEXT.BMP' source='43,0,86,42'" pushedimage="file='Player\BTN_NEXT.BMP' source='86,0,129,42'" focusedimage="file='Player\BTN_NEXT.BMP' source='129,0,172,42'"/>
+				</HorizontalLayout>
+				<HorizontalLayout >
+					<Container pos="0,0,37,37" padding="0,3,0,0">
+						<Button name="IDMUTE" normalimage="file='Player\VOLUMECONTROL\BTN_MUTEON3.BMP' source='0,0,37,37'" hotimage="file='Player\VOLUMECONTROL\BTN_MUTEON3.BMP' source='37,0,74,37'" pushedimage="file='Player\VOLUMECONTROL\BTN_MUTEON3.BMP' source='74,0,111,37'" focusedimage="file='Player\VOLUMECONTROL\BTN_MUTEON3.BMP' source='111,0,148,37'"/>
+						<Button name="IDUNMUTE" visible="false" textcolor="#00000000" disabledtextcolor="#00000000" normalimage="file='Player\VOLUMECONTROL\BTN_MUTEOFF.BMP' source='0,0,37,37'" hotimage="file='Player\VOLUMECONTROL\BTN_MUTEOFF.BMP' source='37,0,74,37'" pushedimage="file='Player\VOLUMECONTROL\BTN_MUTEOFF.BMP' source='74,0,111,37'" focusedimage="file='Player\VOLUMECONTROL\BTN_MUTEOFF.BMP' source='111,0,148,37'"/>
+					</Container>
+					<Slider name="IDVOLUME" pos="0,0,150,21" padding="5,10,0,0" bkimage="file='Player\VOLUMECONTROL\SLIDER_EMPTY.PNG' corner='5,10,5,10'" foreimage="file='Player\VOLUMECONTROL\SLIDER_FILL.PNG' source='2,0,28,23' corner='10,10,5,10'" thumbimage="Player\VOLUMECONTROL\SLIDER_KNOB.PNG" thumbhotimage="Player\VOLUMECONTROL\SLIDER_KNOB.PNG" thumbpushedimage="Player\VOLUMECONTROL\SLIDER_KNOBHOT.PNG" thumbsize="13,13"/>
+				</HorizontalLayout >
+			</HorizontalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>
+
