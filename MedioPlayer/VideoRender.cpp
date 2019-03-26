@@ -35,7 +35,22 @@ VideoRender::VideoRender(HWND hwnd)
 }
 VideoRender::~VideoRender()
 {
-	
+	if (m_vp != NULL) {
+		FreeVideoProcesser(&m_vp);
+		m_vp = NULL;
+	}
+	if (m_sr != NULL) {
+		FreeScreenRender(&m_sr);
+		m_sr = NULL;
+	}
+	if (m_usr != NULL) {
+		FreeUserScreenRender(&m_usr);
+		m_usr = NULL;
+	}
+	if (m_sb != NULL) {
+		FreeSubtitle(&m_sb);
+		m_sb = NULL;
+	}
 }
 int VideoRender::Play(VideoState *is,SynchronizeClockState *scs)
 {

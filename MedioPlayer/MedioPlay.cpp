@@ -69,14 +69,6 @@ int MedioPlay::Open(const char* FileName)
 	if(m_strName == FileName) return 1;
 	if(m_strName != ""){
 		Stop();
-		if(m_pRender != NULL) delete m_pRender;
-		m_pRender = NULL;
-		if(m_pVideo != NULL) delete m_pVideo;
-		m_pVideo = NULL;
-		Free_Syschronize_Clock(&m_scs);
-		FreeVideoState(&m_is);
-		m_isStop = 0;
-		m_isPause = 0;
 	}
 	m_strName = FileName;
 
@@ -184,6 +176,7 @@ void MedioPlay::RePlay()
 }
 void MedioPlay::Play()
 {
+	if (m_is == NULL) return;
 	m_isPause = false;
 
 	bool eof = m_is->eof;
@@ -240,7 +233,7 @@ void MedioPlay::Pause()
 void MedioPlay::Stop()
 {
 	m_isStop = true;
-	m_is->abort_request = true;
+	if(m_is != NULL) m_is->abort_request = true;
 
 	if(m_hThread != NULL)
 	{
@@ -249,6 +242,29 @@ void MedioPlay::Stop()
 		m_hThread = NULL;
 	}
 	m_nCurPos = -1;
+
+	if (m_pRender != NULL) {
+		m_pRender->Stop();
+		delete m_pRender;
+		m_pRender = NULL;
+	}
+	if (m_pVideo != NULL) {
+		m_pVideo->Stop();
+		delete m_pVideo;
+		m_pVideo = NULL;
+	}
+	
+	if (m_scs != NULL) {
+		Free_Syschronize_Clock(&m_scs);
+	}
+
+	if (m_is != NULL) {
+		FreeVideoState(&m_is);
+		m_is = NULL;
+	}
+
+	m_isStop = 0;
+	m_isPause = 0;
 }
 bool MedioPlay::IsPlaying()
 {

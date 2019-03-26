@@ -185,6 +185,26 @@ void FreeVideoState(VideoState **is)
 	if(is == NULL) return;
 	if(*is != NULL)
 	{
+		packet_queue_abort(&(*is)->videoq);
+		packet_queue_abort(&(*is)->audioq);
+		packet_queue_abort(&(*is)->subtitleq);
+
+		packet_queue_destroy(&(*is)->videoq);
+		packet_queue_destroy(&(*is)->audioq);
+		packet_queue_destroy(&(*is)->subtitleq);
+
+		if ((*is)->video_st != NULL) {
+			avcodec_close((*is)->video_st->codec);
+		}
+
+		if ((*is)->audio_st != NULL) {
+			avcodec_close((*is)->audio_st->codec);
+		}
+
+		if ((*is)->subtitle_st != NULL) {
+			avcodec_close((*is)->subtitle_st->codec);
+		}
+
 		if ((*is)->ic) {
 			avformat_close_input(&(*is)->ic);
 		}
